@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Юлия Пигулина](https://up.htmlacademy.ru/htmlcss/35/user/1891505).
-* Наставник: `Неизвестно`.
+* Наставник: [Алена Сафьянникова] (https://htmlacademy.ru/profile/safyann).
 
 ---
 
