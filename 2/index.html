@@ -64,34 +64,26 @@
       <h1 class="visually-hidden">Магазин мороженого «Gllacy Shop»</h1>
       <section class="slider">
         <h2 class="visually-hidden">Примеры мороженого</h2>
-        <ul>
+        <ul class="slider-gallery">
           <li>
             <h3>Нежный пломбир с клубничным джемом</h3>
             <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом
               – это идеальный десерт для всей семьи.</p>
             <a class="button" href="#">Заказать</a>
+            <img src="#" alt="Нежный пломбир с клубничным джемом">
           </li>
           <li>
             <h3>Сливочное мороженое со вкусом банана</h3>
             <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
               даже в самый жаркий летний день. </p>
             <a class="button" href="#">Заказать</a>
+            <img src="#" alt="Сливочное мороженое со вкусом банана">
           </li>
           <li>
             <h3>Карамельный пломбир с маршмеллоу</h3>
             <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца
                сладкоежек всех возрастов.</p>
             <a class="button" href="#">Заказать</a>
-          </li>
-        </ul>
-        <ul class="slider-gallery">
-          <li>
-            <img src="#" alt="Нежный пломбир с клубничным джемом">
-          </li>
-          <li>
-            <img src="#" alt="Сливочное мороженое со вкусом банана">
-          </li>
-          <li>
             <img src="#" alt="Карамельный пломбир с маршмеллоу">
           </li>
         </ul>
@@ -163,9 +155,9 @@
               <p>Сливочное мороженое с малиновым джемом</p>
             </a>
             <b class="popular-card-price">310 ₽/кг</b>
-            <a class="popular-card-button" href="#">
+            <button type="button" class="button popular-card-button">
               <span class="visually-hidden">В корзину</span>
-            </a>
+            </button>
           </li>
           <li class="popular-card">
             <a class="popular-card-link" href="#">
@@ -174,9 +166,9 @@
               <p>Фисташковый пломбир с кусочками шоколада</p>
             </a>
             <b class="popular-card-price">340 ₽/кг</b>
-            <a class="popular-card-button" href="#">
+            <button type="button" class="button popular-card-button">
               <span class="visually-hidden">В корзину</span>
-            </a>
+            </button>
           </li>
           <li class="popular-card">
             <a class="popular-card-link" href="#">
@@ -185,9 +177,9 @@
               <p>Крем-брюле с черничным джемом</p>
             </a>
             <b class="popular-card-price">330 ₽/кг</b>
-            <a class="popular-card-button" href="#">
+            <button type="button" class="button popular-card-button">
               <span class="visually-hidden">В корзину</span>
-            </a>
+            </button>
           </li>
           <li class="popular-card">
             <a class="popular-card-link" href="#">
@@ -239,12 +231,8 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <label for="delivery-date">Дата</label>
             <input type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" required>
-          </form>
-          <form action="https://echo.htmlacademy.ru/">
             <label for="delivery-phone">Телефон</label>
             <input type="tel" name="delivery-phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
-          </form>
-          <form action="https://echo.htmlacademy.ru/">
             <label for="delivery-address">Адрес</label>
             <input type="text" name="delivery-address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
             <button class="button form-button">Отправить</button>
