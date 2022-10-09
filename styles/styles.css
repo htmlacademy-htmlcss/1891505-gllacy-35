@@ -21,3 +21,254 @@
   src: url("../fonts/inter-900.woff2") format("woff2");
   font-display: swap;
 }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+  background-color: #FEAFC3;
+}
+
+.button {
+  color: #2D3440;
+  font-weight: 700;
+  line-height: 20px;
+  background: #FCFCFC;
+  border: none;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+  text-decoration: none;
+}
+
+.page-header {
+  color: #2D3440;
+  line-height: 20px;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-link {
+  text-align: center;
+  text-decoration: none;
+  color: #2D3440;
+  list-style-type: none;
+}
+
+.catalog-navigation-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.catalog-navigation-list {
+  list-style-type: none;
+}
+
+.catalog-new-products,
+.phone-header {
+  font-weight: 700;
+}
+
+.slider-gallery {
+  color: #2D3440;
+  font-size: 18px;
+  line-height: 24px;
+  list-style-type: none;
+}
+
+.slider-title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+
+.slider-social-list,
+.presents-list {
+  list-style-type: none;
+}
+
+.presents {
+  color: #2D3440;
+}
+
+.presents h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px
+}
+
+.presents h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.popular-list {
+  list-style-type: none;
+}
+
+.popular-card-link {
+  color: #565C66;
+  text-decoration: none;
+}
+
+.popular-card-link h3,
+.popular-card-price {
+  color: #2D3440;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.popular-card-button {
+  background: #FF2F64;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  }
+
+.popular h2,
+.advantages h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: #2D3440;
+}
+
+.advantages-container {
+  background: url("../images/waffle-background.png") no-repeat;
+  background-size: 1170px 480px;
+}
+
+.advantages {
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+
+.advantages-list {
+  list-style-type: none;
+}
+
+.blog {
+  background: url("../images/blog-background.jpg") no-repeat;
+  background-size: 570px 224px;
+  border-radius: 16px;
+  }
+
+.blog a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2D3440;
+  text-decoration: none;
+}
+
+.newsletter {
+  background: #FFFFFF url("../images/mail-background.png") no-repeat;
+  background-size: 570px 224px;
+  border-radius: 16px;
+  background-position: 100% 0;
+}
+
+.newsletter-container {
+  background: #FFFFFF;
+  border-radius: 16px;
+  background-size: 558px 212px;
+}
+
+.form-button {
+  color: #FCFCFC;
+
+  background: #FF2F64;
+  outline: 4px solid rgba(255, 47, 100, 0.3);
+  border-radius: 26px;
+}
+
+.delivery {
+  background: #FFFFFF url("../images/delivery-background.png") no-repeat;
+  background-size: 1170px 534px;
+  border-radius: 16px;
+  background-position: 100% 0;
+}
+
+.delivery h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: #2D3440;
+}
+
+.delivery-form {
+  background: #FCFCFC;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+}
+
+.delivery label {
+  font-weight: 700;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.contacts {
+  background: #ede4e4 url("../images/contacts-background.jpg") no-repeat;
+  background-size: 1170px 492px;
+  border-radius: 16px;
+}
+
+.contacts-container {
+  background: #FCFCFC;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+}
+
+.contacts-address {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+  color: #2D3440;
+}
+
+.contacts-phone {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+  color: #2D3440;
+  text-decoration: none;
+}
+
+.footer-social-list,
+.information-list {
+  list-style-type: none;
+}
+
+.information-link {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.suppliers-link {
+  font-weight: 700;
+}
+
+.htmlacademy {
+  font-size: 12px;
+  line-height: 16px;
+  color: #2D3440;
+}
+
+.htmlacademy-link {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2D3440;
+}
