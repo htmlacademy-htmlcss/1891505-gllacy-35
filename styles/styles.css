@@ -112,6 +112,11 @@ body {
   list-style-type: none;
 }
 
+.popular-card {
+  background: #FCFCFC;
+  border-radius: 8px;
+}
+
 .popular-card-link {
   color: #565C66;
   text-decoration: none;
