@@ -22,7 +22,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -42,9 +50,39 @@ body {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header {
   color: #2D3440;
   line-height: 20px;
+}
+
+.navigation {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 700px;
+}
+
+.navigation-user {
+  max-width: 450px;
+  margin-left: auto;
 }
 
 .navigation-list {
@@ -73,11 +111,23 @@ body {
   font-weight: 700;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+
 .slider-gallery {
   color: #2D3440;
   font-size: 18px;
   line-height: 24px;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slider-title {
@@ -91,6 +141,17 @@ body {
   list-style-type: none;
 }
 
+.presents-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.presents-item {
+  width: 570px;
+}
+
 .presents {
   color: #2D3440;
 }
@@ -100,6 +161,8 @@ body {
   font-size: 32px;
   line-height: 46px;
   color: #2D3440;
+  margin: 0;
+  text-align: center;
 }
 
 .presents h3 {
@@ -108,13 +171,21 @@ body {
   line-height: 30px;
 }
 
+
+
 .popular-list {
   list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .popular-card {
   background: #FCFCFC;
   border-radius: 8px;
+  width: 270px;
 }
 
 .popular-card-link {
@@ -139,25 +210,43 @@ body {
 
 .advantages-container {
   background: url("../images/waffle-background.png") no-repeat;
-  background-size: 1170px 480px;
+  background-size: cover;
+  padding: 24px;
+  border-radius: 16px;
 }
 
 .advantages {
   background: #FFFFFF;
   border-radius: 16px;
+  width: 1122px;
 }
 
 .advantages-list {
+  display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+}
+
+.advantages-item {
+  width: 442px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .blog {
   background: url("../images/blog-background.jpg") no-repeat;
   background-size: 570px 224px;
   border-radius: 16px;
-  }
+  width: 570px;
+}
 
-.blog a {
+.blog-link {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -167,15 +256,21 @@ body {
 
 .newsletter {
   background: #FFFFFF url("../images/mail-background.png") no-repeat;
-  background-size: 570px 224px;
+  background-size: cover;
   border-radius: 16px;
-  background-position: 100% 0;
+  width: 570px;
+  padding: 6px;
 }
 
 .newsletter-container {
   background: #FFFFFF;
   border-radius: 16px;
   background-size: 558px 212px;
+
+}
+
+.newsletter-container p {
+  margin: 0;
 }
 
 .form-button {
@@ -191,12 +286,19 @@ body {
   background-size: 1170px 534px;
   border-radius: 16px;
   background-position: 100% 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.delivery-wrapper {
+  width: 370px;
 }
 
 .delivery-form {
   background: #FCFCFC;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  width: 500px;
 }
 
 .delivery label {
@@ -217,6 +319,10 @@ body {
   border-radius: 8px;
 }
 
+.contacts-container p {
+  margin: 0;
+}
+
 .contacts-address {
   font-weight: 700;
   font-size: 20px;
@@ -234,9 +340,26 @@ body {
   text-decoration: none;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0 auto;
+}
+
 .footer-social-list,
 .information-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-list {
+  width: 120px;
+}
+
+.information-list {
+  width: 356px;
 }
 
 .information-link {
@@ -256,6 +379,10 @@ body {
   color: #2D3440;
 }
 
+.htmlacademy-wrapper {
+  width: 193;
+}
+
 .htmlacademy-link {
   text-decoration: none;
   font-size: 12px;
@@ -268,7 +395,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  }
+}
 
 .breadcrumbs-link {
   text-decoration: none;
@@ -314,4 +441,4 @@ body {
   outline: none;
   box-shadow: none;
   text-decoration: none;
-  }
+}
