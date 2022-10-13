@@ -72,21 +72,45 @@ body {
   display: flex;
   width: 1170px;
   margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navigation-logo {
+  margin-right: 32px;
 }
 
 .navigation-list {
   margin: 0;
   padding: 0;
-  width: 700px;
+  max-width: 700px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .navigation-user {
   max-width: 450px;
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.navigation-list {
-  list-style-type: none;
+.navigation-item {
+  margin-right: 32px;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
+
+}
+
+.navigation-item-user {
+  margin-right: 16px;
+}
+
+.navigation-item-user:last-child {
+  margin-right: 0;
 }
 
 .navigation-link {
@@ -94,7 +118,9 @@ body {
   text-decoration: none;
   color: #2D3440;
   list-style-type: none;
+
 }
+
 
 .catalog-navigation-link {
   font-size: 14px;
@@ -104,6 +130,7 @@ body {
 
 .catalog-navigation-list {
   list-style-type: none;
+  padding: 0;
 }
 
 .catalog-new-products,
@@ -352,6 +379,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+
 }
 
 .footer-social-list {
@@ -380,7 +409,7 @@ body {
 }
 
 .htmlacademy-wrapper {
-  width: 193;
+  width: 193px;
 }
 
 .htmlacademy-link {
@@ -395,6 +424,9 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .breadcrumbs-link {
@@ -404,6 +436,31 @@ body {
 
 .breadcrumbs-link-current {
   text-decoration: underline;
+}
+
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-filter-group {
+  margin: 0;
+}
+
+.fat-filter {
+  display: flex;
+  min-width: 383px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topping-filter {
+  display: flex;
+  min-width: 604px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-button {
@@ -416,11 +473,17 @@ body {
 
 .product-list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .product-card {
   background: #FCFCFC;
   border-radius: 8px;
+  width: 270px;
 }
 
 .product-card-link {
@@ -441,4 +504,18 @@ body {
   outline: none;
   box-shadow: none;
   text-decoration: none;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+}
+
+.pagination-show-more {
+  margin-right: 340px;
 }
