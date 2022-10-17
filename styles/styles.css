@@ -68,6 +68,8 @@ body {
   line-height: 20px;
 }
 
+/* Главная страница */
+
 .navigation {
   display: flex;
   width: 1170px;
@@ -86,6 +88,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
 }
 
@@ -94,6 +97,7 @@ body {
   margin-left: auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation-item {
@@ -105,8 +109,16 @@ body {
 
 }
 
-.navigation-item-user {
+.navigation-item {
+  display: block;
+  box-sizing: border-box;
+}
+
+.navigation-item-icon {
   margin-right: 16px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+  padding: 6px 16px;
 }
 
 .navigation-item-user:last-child {
@@ -121,6 +133,10 @@ body {
 
 }
 
+/* Выпадающая навигация по каталогу */
+.catalog-navigation-item {
+  display: none;
+}
 
 .catalog-navigation-link {
   font-size: 14px;
@@ -147,6 +163,9 @@ body {
   margin: 0 auto;
 }
 
+.slider {
+  margin-bottom: 80px;
+}
 
 .slider-gallery {
   color: #2D3440;
@@ -163,10 +182,34 @@ body {
   line-height: 46px;
 }
 
-.slider-social-list,
+.slider-pagination {
+  display: flex;
+  list-style-type: none;
+}
+
+.slider-pagination-button {
+  margin-right: 8px;
+}
+
+.slider-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.slider-social-item {
+  min-width: 24px;
+  margin-right: 16px;
+}
+
+.presents {
+  margin-bottom: 80px;
+}
+
 .presents-list {
   list-style-type: none;
 }
+
 
 .presents-list {
   display: flex;
@@ -190,6 +233,7 @@ body {
   color: #2D3440;
   margin: 0;
   text-align: center;
+  margin-bottom: 56px;
 }
 
 .presents h3 {
@@ -198,41 +242,8 @@ body {
   line-height: 30px;
 }
 
-
-
-.popular-list {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.popular-card {
-  background: #FCFCFC;
-  border-radius: 8px;
-  width: 270px;
-}
-
-.popular-card-link {
-  color: #565C66;
-  text-decoration: none;
-}
-
-.popular-card-link h3,
-.popular-card-price {
-  color: #2D3440;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.popular-card-button {
-  background: #FF2F64;
-  outline: none;
-  box-shadow: none;
-  text-decoration: none;
+.popular {
+  margin-bottom: 80px;
 }
 
 .advantages-container {
@@ -240,6 +251,7 @@ body {
   background-size: cover;
   padding: 24px;
   border-radius: 16px;
+  margin-bottom: 80px;
 }
 
 .advantages {
@@ -258,19 +270,30 @@ body {
 
 .advantages-item {
   width: 442px;
-  margin-bottom: 40px;
+  margin: 0 30px 40px 16px;
+}
+
+.advantages-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 .blog {
   background: url("../images/blog-background.jpg") no-repeat;
-  background-size: 570px 224px;
+  background-size: cover;
   border-radius: 16px;
   width: 570px;
+  padding: 65px 235px 67px 32px;
+  box-sizing: border-box;
+}
+
+.blog p {
+  margin: 0;
 }
 
 .blog-link {
@@ -293,11 +316,11 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   background-size: 558px 212px;
-
+  padding: 26px;
 }
 
 .newsletter-container p {
-  margin: 0;
+  margin: 0 0 44px 0;
 }
 
 .form-button {
@@ -314,7 +337,13 @@ body {
   border-radius: 16px;
   background-position: 100% 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  padding: 64px 64px 64px 100px;
+}
+
+.delivery-description {
+  margin: 0;
 }
 
 .delivery-wrapper {
@@ -326,6 +355,11 @@ body {
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   width: 500px;
+  padding: 40px;
+}
+
+.delivery-form-description {
+  margin: 0 0 60px 0;
 }
 
 .delivery label {
@@ -338,16 +372,21 @@ body {
   background: #ede4e4 url("../images/contacts-background.jpg") no-repeat;
   background-size: 1170px 492px;
   border-radius: 16px;
+  padding: 64px 763px 64px 64px;
+
 }
 
 .contacts-container {
   background: #FCFCFC;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  padding: 40px;
 }
 
+
+
 .contacts-container p {
-  margin: 0;
+  margin: 0 0 12px 0;
 }
 
 .contacts-address {
@@ -367,6 +406,10 @@ body {
   text-decoration: none;
 }
 
+.page-footer {
+  padding: 48px 0;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -374,22 +417,32 @@ body {
   margin: 0 auto;
 }
 
-.footer-social-list,
+.footer-social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+}
+
+.footer-social-item {
+  min-width: 24px;
+  margin-right: 16px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+
+
 .information-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-
-}
-
-.footer-social-list {
-  width: 120px;
-}
-
-.information-list {
   width: 356px;
 }
+
 
 .information-link {
   font-size: 14px;
@@ -419,6 +472,12 @@ body {
   color: #2D3440;
 }
 
+/* Страница каталога */
+
+.main-inner {
+  padding-top: 32px;
+}
+
 .breadcrumbs {
   list-style-type: none;
   font-weight: 700;
@@ -427,6 +486,14 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+}
+
+.breadcrumbs-item {
+  margin-right: 11px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs-link {
@@ -438,13 +505,26 @@ body {
   text-decoration: underline;
 }
 
+.katalog-title {
+  text-align: start;
+  margin-bottom: 40px;
+}
+
 .sorting {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.catalog-filter-list {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
 }
 
 .catalog-filter-group {
   margin: 0;
+  border: none;
 }
 
 .fat-filter {
@@ -453,6 +533,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background: rgba(252, 252, 252, 0.3);
 }
 
 .topping-filter {
@@ -474,21 +555,25 @@ body {
 .product-list {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .product-card {
   background: #FCFCFC;
   border-radius: 8px;
   width: 270px;
+  margin-bottom: 40px;
 }
 
 .product-card-link {
   color: #565C66;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card-link h3,
@@ -509,6 +594,7 @@ body {
 .pagination-wrapper {
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 
 .pagination {
@@ -516,6 +602,15 @@ body {
   list-style-type: none;
 }
 
+.pagination-link {
+  text-decoration: none;
+  line-height: 20px;
+  color: #2D3440;
+  margin-right: 13px;
+}
+
 .pagination-show-more {
   margin-right: 340px;
+  padding: 12px 32px;
+
 }
