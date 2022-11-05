@@ -255,6 +255,8 @@ body {
   margin: 0 auto;
 }
 
+/* Слайдер */
+
 .slider {
   margin-bottom: 80px;
 }
@@ -273,20 +275,18 @@ body {
   display: flex;
   align-items: center;
   margin-right: 40px;
+  position: relative;
 }
 
 .slider-ice-cream:last-child {
   margin-right: 0;
 }
 
-
-.slider-ice-cream-inactive {
-  width: 100px;
-
-}
-
-.slider-ice-cream-inactive {
-  object-fit: contain;
+.slider-title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+  margin: 0;
 }
 
 .slider-ice-cream-description {
@@ -300,20 +300,126 @@ body {
   display: none;
 }
 
-.slider-title {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 46px;
-  margin: 0;
+.slider-ice-cream-active::before {
+  content: "";
+  position: absolute;
+  width: 312px;
+  height: 312px;
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: 50%;
+  z-index: -1;
+  background: #FFCBD8;
+}
+
+.slider-ice-cream-inactive::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: 50%;
+  background: #FFCBD8;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.slider-foto-inactive {
+  width: 100px;
+  object-fit: contain;
+  opacity: 0.4;
+}
+
+.slider-button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 50%;
+  color: #FCFCFC;
+  box-sizing: border-box;
+  padding: 13px 16px 13px 16px;
+  transform: translateX(-11px);
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  background: #FCFCFC;
+  color: #2D3440;
+}
+
+.slider-button:active {
+  background: rgba(252, 252, 252, 0.5);
+  color: #2D3440;
+}
+
+.slider-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+}
+
+.slider-button:disabled {
+  opacity: 0.4;
+}
+
+.slider-prev {
+  transform: translate(16px, 3px) rotate(180deg);
+}
+
+.slider-arrow {
+  position: absolute;
+  transform: translate(-3px, -5px);
+}
+
+.slider-prev {
+  transform: translateX(16px) rotate(180deg);
 }
 
 .slider-pagination {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.slider-pagination-item {
+  margin-right: 8px;
+}
+
+.slider-pagination-item:last-child {
+  margin-right: 0;
 }
 
 .slider-pagination-button {
-  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  background: #FCFCFC;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+  background: rgba(252, 252, 252, 0.3);
+  box-shadow: inset 0 0 0 1px #FCFCFC;
+  ;
+}
+
+.slider-pagination-button:active {
+  background: #FCFCFC;
+}
+
+.slider-pagination-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  box-shadow: inset 0 0 0 1px #2D3440;
+}
+
+.slider-pagination-button-current {
+  opacity: 1;
 }
 
 .slider-social-list {
@@ -329,39 +435,12 @@ body {
   box-sizing: border-box;
 }
 
-.social-link {
-  display: block;
-  border-radius: 50%;
-}
-
-.social-link:hover {
-  background-color: #2D3440;
-  background-size: contain;
-  outline: 3px solid rgba(252, 252, 252, 0.5);
-  outline-offset: -1px;
-}
-
-.social-link:active {
-  opacity: 0.5;
-}
-
-.social-link:focus {
-  outline: 2px solid #2D3440;
-  background-color: #2D3440;
-}
-
-.social-icon {
-  display: block;
-  color: #FCFCFC;
-  outline: 3px solid rgba(252, 252, 252, 0.3);
-  border-radius: 24px;
-  outline-offset: -1px;
-}
-
 .sider-footer {
   display: flex;
   justify-content: space-between;
 }
+
+/* Секция "Подарки" */
 
 .presents {
   margin-bottom: 80px;
@@ -489,7 +568,7 @@ body {
   background-size: cover;
   border-radius: 16px;
   width: 570px;
-  padding: 65px 235px 67px 32px;
+  padding: 32px 235px 67px 32px;
   box-sizing: border-box;
   background-position: right 100% bottom 25%;
 }
@@ -504,7 +583,10 @@ body {
   line-height: 30px;
   color: #2D3440;
   text-decoration: none;
+  margin-top: 12px;
 }
+
+/* Форма подписки на новости */
 
 .newsletter {
   background: #FFFFFF url("../images/mail-background.png") no-repeat;
@@ -524,6 +606,56 @@ body {
 .newsletter-container p {
   margin: 0 0 44px 0;
 }
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  margin: 0 18px 0 0;
+}
+
+.field {
+  padding: 14px 16px;
+  font: inherit;
+  line-height: 20px;
+  color: #2D3440;
+  background: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+.field:hover {
+  border: 1px solid #2D3440;
+}
+
+.field:focus {
+  border: 2px solid #2D3440;
+}
+
+.field:not(:empty):invalid {
+  border: 1px solid #EA5454;
+}
+
+.field:not(:empty):hover:invalid {
+  border: 2px solid #EA5454;
+}
+.field:disabled {
+  background: #E7E7E7;
+border: 1px solid #B9B9B9;
+}
+
+.field:disabled:hover {
+  background: #E7E7E7;
+border: 1px solid #B9B9B9;
+opacity: 0.65;
+}
+
+.field::placeholder {
+  color: #B9B9B9;
+}
+
 
 .form-button {
   color: #FCFCFC;
@@ -549,6 +681,8 @@ body {
   outline: 2px solid #2D3440;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
+
+/* Доставка */
 
 .delivery {
   border-radius: 16px;
@@ -592,7 +726,6 @@ body {
   background: #FCFCFC;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  width: 500px;
   padding: 40px;
   display: grid;
   grid-template-columns: 117px 287px;
@@ -604,10 +737,11 @@ body {
   grid-column: 1/-1;
 }
 
-.delivery label {
+.form-label {
   font-weight: 700;
   line-height: 20px;
   color: #2D3440;
+  margin-bottom: 8px;
 }
 
 .delivery-date-wrapper,
@@ -615,10 +749,12 @@ body {
 .delivery-address-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .delivery-address-wrapper {
   grid-column: 1/-1;
+  margin-bottom: 32px;
 }
 
 .delivery-button {
@@ -683,6 +819,35 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 120px;
+}
+
+.social-link {
+  display: block;
+  border-radius: 50%;
+}
+
+.social-link:hover {
+  background-color: #2D3440;
+  background-size: contain;
+  outline: 3px solid rgba(252, 252, 252, 0.5);
+  outline-offset: -1px;
+}
+
+.social-link:active {
+  opacity: 0.5;
+}
+
+.social-link:focus {
+  outline: 2px solid #2D3440;
+  background-color: #2D3440;
+}
+
+.social-icon {
+  display: block;
+  color: #FCFCFC;
+  outline: 3px solid rgba(252, 252, 252, 0.3);
+  border-radius: 24px;
+  outline-offset: -1px;
 }
 
 .footer-social-item {
