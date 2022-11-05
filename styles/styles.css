@@ -574,19 +574,19 @@ body {
 }
 
 .advantages-item-production {
-  background: url("../images/icon-ice-cream.svg") no-repeat;
+  background: url("../images/icons/icon-ice-cream.svg") no-repeat;
 }
 
 .advantages-item-farmers {
-  background: url("../images/icon-cow.svg") no-repeat;
+  background: url("../images/icons/icon-cow.svg") no-repeat;
 }
 
 .advantages-item-raw-material {
-  background: url("../images/icon-leaf.svg") no-repeat;
+  background: url("../images/icons/icon-leaf.svg") no-repeat;
 }
 
 .advantages-item-temp {
-  background: url("../images/icon-thermometer.svg") no-repeat;
+  background: url("../images/icons/icon-thermometer.svg") no-repeat;
 }
 
 .advantages-item:nth-child(2n) {
@@ -926,7 +926,7 @@ body {
   content: "";
   min-width: 14px;
   min-height: 12px;
-  background: url("../images/heart.svg") no-repeat;
+  background: url("../images/icons/heart.svg") no-repeat;
   position: absolute;
   top: 3px;
   left: -20px;
@@ -955,22 +955,33 @@ body {
   padding-top: 32px;
 }
 
+.katalog-title {
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+/* Breadcrumbs */
+
 .breadcrumbs {
   list-style-type: none;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 16px 0;
   display: flex;
 }
 
 .breadcrumbs-item {
+  padding-right: 18px;
   margin-right: 11px;
+  background: url("../images/icons/union-breadscrumbs.svg") no-repeat right 0 center;
 }
 
 .breadcrumbs-item:last-child {
+  padding-right: 0;
   margin-right: 0;
+  background: none;
 }
 
 .breadcrumbs-link {
@@ -982,21 +993,22 @@ body {
   text-decoration: underline;
 }
 
-.katalog-title {
-  text-align: start;
-  margin-bottom: 40px;
-}
+/* Сортировка */
 
 .sorting {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 44px;
+  color: #2D3440;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .catalog-filter-list {
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 18px;
+  padding: 8px 24px;
 }
 
 .catalog-filter-group {
@@ -1004,22 +1016,220 @@ body {
   border: none;
 }
 
+.catalog-filter-title {
+  padding: 0 0 0 16px;
+}
+
+.catalog-filter-title-price {
+  margin: 0 5px 0 0;
+}
+
+/* Фильтр "Сортировка" */
+
+.select-control {
+  padding: 12px 16px;
+  background: rgba(252, 252, 252, 0.3) url("../images/icons/union-select.svg") no-repeat right 16px center;
+  border: none;
+  border-radius: 20px;
+  appearance: none;
+  display: flex;
+}
+
+.select-control:hover {
+  background: rgba(252, 252, 252, 0.5) url("../images/icons/union-select.svg") no-repeat right 16px center;
+}
+
+.select-control:focus {
+  background: rgba(252, 252, 252, 0.4) url("../images/icons/union-select.svg") no-repeat right 16px center;
+  box-shadow: inset 0 0 0 2px #FCFCFC;
+}
+
+/* Фильтр "Цена" */
+
+.range-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range {
+  padding: 17px 16px;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+}
+
+.range-scale {
+  position: relative;
+  width: 164px;
+  height: 4px;
+  background-color: rgb(86, 92, 102, 0.3);
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #565C66;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #2D3440;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle-background {
+  display: block;
+  background: #FCFCFC;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.range-toggle:hover {
+  background: #FCFCFC;
+}
+
+.range-toggle:hover .range-toggle-background,
+.range-toggle:active .range-toggle-background,
+.range-toggle:active .range-toggle-background {
+  background-color: #2D3440;
+}
+
+.range-toggle:focus {
+  box-shadow: inset 0 0 0 2px #2D3440;
+}
+
+.toggle-min {
+  top: -6px;
+  right: 68px;
+}
+
+.toggle-max {
+  top: -6px;
+  right: -8px;
+}
+
+/* Фильтр "Жирность" */
+
 .fat-filter {
   display: flex;
-  min-width: 383px;
   list-style-type: none;
   margin: 0;
-  padding: 0;
   background: rgba(252, 252, 252, 0.3);
+}
+
+.control-fat,
+.control-topping {
+  position: relative;
+  padding-left: 24px;
+  margin-right: 16px;
+}
+
+.control-mark-fat {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2D3440;
+  border-radius: 50%;
+  top: 1px;
+  left: -2px;
+}
+
+.control-input-fat:checked + .control-mark-fat::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  background: #2D3440;
+  border-radius: 50%;
+}
+
+.control-mark-fat:hover,
+.control-mark-topping:hover {
+  border: 1px solid #FCFCFC;
+}
+
+.control-mark-fat:disabled
+.control-mark-topping:disabled {
+  border: 1px solid rgba(252, 252, 252, 0.6);
+}
+
+.control-input-fat:checked:hover + .control-mark-fat::before {
+  background: #FCFCFC;
+}
+
+.control-input-fat:checked:disabled + .control-mark-fat::before {
+  background: rgba(252, 252, 252, 0.6);
 }
 
 .topping-filter {
   display: flex;
-  min-width: 604px;
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 44px;
-  padding: 0;
+}
+
+.control-mark-topping {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #2D3440;
+  border-radius: 2px;
+  box-sizing: border-box;
+  top: 1px;
+  left: -2px;
+}
+
+.control-input-topping:checked + .control-mark-topping {
+  position: absolute;
+  background: url("../images/icons/checkbox-black.svg") no-repeat center center;
+  border: none;
+}
+
+.control-input-topping:checked:hover + .control-mark-topping {
+  position: absolute;
+  background: url("../images/icons/checkbox-white.svg") no-repeat center center;
+  border: none;
+}
+
+.control-input-topping:checked:disabled + .control-mark-topping {
+  position: absolute;
+  background: url("../images/icons/checkbox-gray.svg") no-repeat center center;
+  border: none;
 }
 
 .sorting-button {
@@ -1028,6 +1238,9 @@ body {
   background: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
   box-shadow: none;
+  align-self: baseline;
+  padding: 8px 52px;
+  margin-top: 26px;
 }
 
 .sorting-button:hover {
@@ -1123,13 +1336,13 @@ body {
 
 .product-card-button:active {
   background: #FFCBD8;
-  outline: 2px solid #FF2F64;
+  box-shadow: inset 0 0 0 2px #FF2F64;
   color: #2D3440;
 }
 
 .product-card-button:focus {
   background: #FF2F64;
-  outline: 2px solid #2D3440;
+  box-shadow: inset 0 0 0 2px #2D3440;
   border-radius: 26px;
 
 }
