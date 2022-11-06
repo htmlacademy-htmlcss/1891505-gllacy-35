@@ -49,6 +49,7 @@ body {
   border-radius: 26px;
   text-decoration: none;
   padding: 12px 32px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -69,6 +70,11 @@ body {
   outline: 2px solid #2D3440;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
+}
+
+.button:disabled {
+  background: #E7E7E7;
+  border: 4px solid rgba(252, 252, 252, 0.4);
 }
 
 .visually-hidden {
@@ -244,12 +250,8 @@ body {
 }
 
 .navigation-item-catalog-menu:focus-within:active {
-  opacity: 0.3;
-}
-
-.navigation-item-catalog-menu:focus-within:active {
   box-shadow: inset 0 0 0 2px #000000;
-  ;
+  opacity: 0.3;
 }
 
 .navigation-list .navigation-item-catalog-menu:hover .catalog-navigation-list,
@@ -285,7 +287,27 @@ body {
   padding: 10px;
 }
 
+.navigation-link-icon-search:focus-within,
+.navigation-link-icon-exit:focus-within {
+  background: #FF4A78;
+  color: #FCFCFC;
+  border-radius: 28px;
+}
 
+.navigation-link-icon-search:focus-within:hover,
+.navigation-link-icon-exit:focus-within:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-icon-search:focus-within:focus,
+.navigation-link-icon-exit:focus-within:focus {
+  outline: 2px solid #000000;
+}
+
+.navigation-link-icon-search:focus-within:active,
+.navigation-link-icon-exit:focus-within:active {
+  opacity: 0.3;
+}
 
 
 
@@ -719,6 +741,12 @@ body {
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
+.form-button:disabled {
+  background: #B9B9B9;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+  color: #565C66;
+}
+
 /* Доставка */
 
 .delivery {
@@ -1028,7 +1056,7 @@ body {
 
 .select-control {
   padding: 12px 16px;
-  background: rgba(252, 252, 252, 0.3) url("../images/icons/union-select.svg") no-repeat right 16px center;
+  background: rgba(252, 252, 252, 0.3) url("../images/icons/union.svg") no-repeat right 16px center;
   border: none;
   border-radius: 20px;
   appearance: none;
@@ -1036,11 +1064,11 @@ body {
 }
 
 .select-control:hover {
-  background: rgba(252, 252, 252, 0.5) url("../images/icons/union-select.svg") no-repeat right 16px center;
+  background: rgba(252, 252, 252, 0.5) url("../images/icons/union.svg") no-repeat right 16px center;
 }
 
 .select-control:focus {
-  background: rgba(252, 252, 252, 0.4) url("../images/icons/union-select.svg") no-repeat right 16px center;
+  background: rgba(252, 252, 252, 0.4) url("../images/icons/union.svg") no-repeat right 16px center;
   box-shadow: inset 0 0 0 2px #FCFCFC;
 }
 
@@ -1165,6 +1193,7 @@ body {
   border-radius: 50%;
   top: 1px;
   left: -2px;
+  cursor: pointer;
 }
 
 .control-input-fat:checked + .control-mark-fat::before {
@@ -1183,8 +1212,7 @@ body {
   border: 1px solid #FCFCFC;
 }
 
-.control-mark-fat:disabled
-.control-mark-topping:disabled {
+.control-mark-fat:disabled .control-mark-topping:disabled {
   border: 1px solid rgba(252, 252, 252, 0.6);
 }
 
@@ -1212,6 +1240,7 @@ body {
   box-sizing: border-box;
   top: 1px;
   left: -2px;
+  cursor: pointer;
 }
 
 .control-input-topping:checked + .control-mark-topping {
@@ -1255,6 +1284,12 @@ body {
 .sorting-button:focus {
   background: rgba(252, 252, 252, 0.3);
   outline: 2px solid #2D3440;
+}
+
+.sorting-button:disabled {
+  background: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+  border: 2px solid #FCFCFC;
 }
 
 .product-list {
@@ -1325,6 +1360,7 @@ body {
   padding: 9px;
   color: #FCFCFC;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .product-card-button:hover {
@@ -1344,13 +1380,18 @@ body {
   background: #FF2F64;
   box-shadow: inset 0 0 0 2px #2D3440;
   border-radius: 26px;
+}
 
+.product-card-button:disabled {
+  background: #B9B9B9;
 }
 
 .product-card-button-icon {
   display: block;
 
 }
+
+/* Пагинация */
 
 .pagination-wrapper {
   display: flex;
@@ -1363,11 +1404,62 @@ body {
   list-style-type: none;
 }
 
+.pagination-item {
+  position: relative;
+}
+
+.pagination-item:nth-child(6) {
+  margin-right: 5px;
+}
+
 .pagination-link {
   text-decoration: none;
   line-height: 20px;
   color: #2D3440;
-  margin-right: 13px;
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.pagination-link:hover {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.pagination-link:active {
+  background: rgba(252, 252, 252, 0.5);
+  outline: 1px solid #FCFCFC;
+
+}
+
+.pagination-link:focus {
+  background: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #2D3440;
+}
+
+.pagination-link-current {
+  background: #FCFCFC;
+  border-radius: 50%;
+}
+
+.pagination-prev {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  background: url("../images/icons/union.svg") no-repeat center center;
+  left: -34px;
+  top: 4px;
+  transform: rotate(90deg);
+  opacity: 0.5;
+}
+
+.pagination-next {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  background: url("../images/icons/union.svg") no-repeat center center;
+  left: -10px;
+  top: 4px;
+  transform: rotate(-90deg);
 }
 
 .pagination-show-more {
