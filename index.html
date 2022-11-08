@@ -25,6 +25,8 @@
               </svg>
             </a>
 
+            <!-- Выпадающее меню каталога -->
+
             <ul class="catalog-navigation-list">
               <li class="catalog-navigation-item catalog-navigation-item-new">
                 <a class="catalog-navigation-link catalog-new-products" href="#">Новинки</a>
@@ -55,8 +57,7 @@
             <a class="navigation-link phone-header" href="tel:+78005558628">
               <span class="visually-hidden">Телефон</span>+7 800 555-86-28</a>
           </li>
-          <li class="navigation-item navigation-item-user
-              navigation-item-icon ">
+          <li class="navigation-item navigation-item-user navigation-item-icon ">
             <a class="navigation-link navigation-link-user navigation-link-icon-search" href="#">
               <span class="visually-hidden">Найти</span>
               <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -65,6 +66,16 @@
                 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z" clip-rule="evenodd" />
               </svg>
             </a>
+
+            <!-- Поповер - Форма поиска -->
+
+            <div class="popover-search popover-search-active">
+              <form class="popover-search-form" action="#" method="get">
+                <label>
+                  <input class="field popover-search-input" type="text" name="search" placeholder="Поиск по сайту">
+                </label>
+              </form>
+            </div>
           </li>
           <li class="navigation-item navigation-item-user
                 navigation-item-icon navigation-item-icon-exit">
@@ -75,10 +86,30 @@
                 0 0 12 12.19V2.858a.666.666 0 0 0-.667-.667H8.667A.667.667 0 0 1 8 1.525ZM4.862 3.72c.26-.26.682-.26.943 0l3.329
                 3.329a.673.673 0 0 1 .2.476.664.664 0 0 1-.2.476l-3.33 3.328a.667.667 0 1 1-.942-.943l2.195-2.195H.667a.667.667 0
                 1 1 0-1.333h6.39L4.862 4.663a.667.667 0 0 1 0-.943Z" clip-rule="evenodd" />
-              </svg> Вход</a>
+              </svg> Вход
+            </a>
+
+            <!-- Поповер - Авторизация -->
+
+            <div class="popover-authorization popover-authorization-active">
+              <h2 class="popover-title">Личный кабинет</h2>
+              <form class="authorization-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden" for="authorization-login">Логин</label>
+                <input class="field" id="authorization-login" type="email" name="login" placeholder="email@example.com">
+                <label class="visually-hidden" for="authorization-password">Пароль</label>
+                <input class="field" id="authorization-password" type="password" name="password" placeholder="********"
+                  required>
+                <div class="user-authorization-wrapper">
+                  <button type="submit" class="button form-button">Войти</button>
+                  <ul class="user-authorization-list">
+                    <li><a class="user-authorization-link" href="#">Забыли пароль?</a></li>
+                    <li><a class="user-authorization-link" href="#">Регистрация</a></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
           </li>
-          <li class="navigation-item navigation-item-user
-                  navigation-item-icon navigation-item-icon-cart">
+          <li class="navigation-item navigation-item-user navigation-item-icon navigation-item-icon-cart">
             <a class="navigation-link navigation-link-user" href="#">
               <svg class="navigation-icon navigation-icon-cart" xmlns="http://www.w3.org/2000/svg" width="15"
                 height="14" fill="currentColor" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
@@ -90,6 +121,48 @@
               </svg>
               <span>2 товара</span>
             </a>
+
+            <!-- Поповер Полная корзина -->
+
+            <div class="popover-cart popover-cart-active">
+              <h2 class="popover-title">Корзина</h2>
+              <ul class="cart-list">
+                <li class="cart-item">
+                  <img class="product-image" src="images/products/raspberry.jpg" alt="Мороженое «Малинка»" width="46"
+                    height="46">
+                  <div class="cart-price-wrapper">
+                    <h3 class="cart-title">Малинка</h3>
+                    <span>1 кг х 310 ₽</span>
+                  </div>
+                  <b class="cart-price">310 ₽</b>
+                  <button type="button" class="cart-button-delete">
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <img class="product-image" src="images/products/bubble-gum.jpg" alt="Мороженое «Бабл-гам»»" width="46"
+                    height="46">
+                  <div class="cart-price-wrapper">
+                    <h3 class="cart-title">Бабл-гам</h3>
+                    <span>1,5 кг х 320 ₽</span>
+                  </div>
+                  <b class="cart-price">480 ₽</b>
+                  <button type="button" class="cart-button-delete">
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="cart-order">
+                <button class="button form-button" type="button">Оформить заказ</button>
+                <span class="product-cart-price">Итого: 790 ₽</span>
+              </div>
+            </div>
+
+            <!-- Поповер - Пустая корзина -->
+
+            <div class="popover-cart-empty popover-cart-empty-active">
+              <h2 class="popover-title popover-title-empty">Ваша корзина пока пуста</h2>
+            </div>
           </li>
         </ul>
       </nav>
@@ -97,7 +170,9 @@
     <main class="main-index main-container">
       <div class="page-container">
         <h1 class="visually-hidden">Магазин мороженого «Gllacy Shop»</h1>
+
         <!-- Слайдер -->
+
         <section class="slider">
           <h2 class="visually-hidden">Примеры мороженого</h2>
           <ul class="slider-gallery">
@@ -324,8 +399,8 @@
             </li>
             <li class="product-card">
               <a class="product-card-link-image" href="#">
-                <img class="product-image" src="images/products/pistachio.jpg" alt="Мороженое
-                                  «Фисташка»" width="168" height="168"></a>
+                <img class="product-image" src="images/products/pistachio.jpg" alt="Мороженое «Фисташка»" width="168"
+                  height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Фисташка</h3>
                 <p>Фисташковый пломбир с кусочками шоколада</p>

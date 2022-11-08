@@ -129,12 +129,28 @@ body {
   align-items: center;
 }
 
-.navigation-user {
-  min-width: 450px;
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.navigation-link {
+  text-align: center;
+  text-decoration: none;
+  color: #2D3440;
+  list-style-type: none;
+  padding: 8px 16px;
+  display: block;
+  border-radius: 30px;
+}
+
+.navigation-link:hover {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.navigation-link:active {
+  background: #FCFCFC;
+}
+
+.navigation-link:focus {
+  background: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+  outline-offset: 0;
 }
 
 .navigation-item {
@@ -143,35 +159,6 @@ body {
 }
 
 .navigation-item:last-child {
-  margin-right: 0;
-}
-
-.navigation-item-icon {
-  margin-right: 16px;
-  background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 30px;
-}
-
-
-.navigation-item-icon-exit,
-.navigation-item-icon-cart {
-  position: relative;
-}
-
-.navigation-icon-exit,
-.navigation-icon-cart {
-  position: absolute;
-  right: auto;
-  left: 17px;
-  top: 9px;
-  margin: auto 0;
-}
-
-.navigation-icon {
-  display: block;
-}
-
-.navigation-item-user:last-child {
   margin-right: 0;
 }
 
@@ -240,7 +227,7 @@ body {
 }
 
 .navigation-link-catalog-menu:focus-within,
-.navigation-item-catalog-menu:focus-within .navigation-link-catalog-menu{
+.navigation-item-catalog-menu:focus-within .navigation-link-catalog-menu {
   background-color: #FF4A78;
   outline: none;
   color: #FCFCFC;
@@ -308,7 +295,7 @@ body {
 }
 
 .navigation-item-catalog-menu:focus-within:hover {
-  background:  #FFCBD8;
+  background: #FFCBD8;
   outline: none;
 }
 
@@ -316,6 +303,20 @@ body {
 .navigation-item-catalog-menu:focus-within:active {
   box-shadow: inset 0 0 0 2px #000000;
   opacity: 0.3;
+}
+
+/* Навигация - Поиск Вход Корзина */
+
+.navigation-user {
+  min-width: 450px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navigation-item-user:last-child {
+  margin-right: 0;
 }
 
 .navigation-link-user {
@@ -344,8 +345,204 @@ body {
   opacity: 0.3;
 }
 
+.navigation-icon {
+  display: block;
+}
+
+.navigation-item-icon {
+  margin-right: 16px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+  position: relative;
+}
+
+
+.navigation-item-icon-exit,
+.navigation-item-icon-cart {
+  position: relative;
+}
+
+.navigation-icon-exit,
+.navigation-icon-cart {
+  position: absolute;
+  right: auto;
+  left: 17px;
+  top: 9px;
+  margin: auto 0;
+}
+
 .navigation-link-icon-search {
   padding: 10px;
+}
+
+/* Поповер - Поиск по сайту */
+
+.popover-search-active {
+  display: block;
+}
+
+.popover-search {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 38px;
+  right: 1px;
+  background: #FCFCFC;
+  border-radius: 4px;
+  padding: 24px 16px;
+  width: 356px;
+}
+
+.popover-search-input {
+  width: 100%;
+  margin: 0;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+/* Поповер - Авторизация */
+
+.popover-authorization-active {
+  display: block;
+}
+
+.popover-authorization {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: -1px;
+  background: #FCFCFC;
+  border-radius: 4px;
+  padding: 48px;
+  width: 420px;
+}
+
+.popover-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 32px 0;
+}
+
+.authorization-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.user-authorization-wrapper {
+  display: flex;
+  column-gap: 23px;
+}
+
+.user-authorization-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-authorization-link {
+  font-size: 14px;
+  color: #2D3440;
+}
+
+/* Поповер Корзина (с товарами)*/
+
+.popover-cart-active {
+  display: block;
+}
+
+.popover-cart {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 440px;
+  background: #FCFCFC;
+  border-radius: 4px;
+  top: 38px;
+  right: 1px;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+.cart-list {
+  padding: 0;
+  position: relative;
+}
+
+.cart-list::after {
+  content: "";
+  width: 345px;
+  height: 1px;
+  background-color: #E7E7E7;
+  bottom: -32px;
+  position: absolute;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.cart-item:last-child {
+  margin-bottom: 64px;
+}
+
+.cart-title {
+  margin: 0;
+}
+
+.product-cart-price,
+.cart-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.cart-price {
+  margin-right: 50px;
+}
+
+.cart-button-delete {
+  background: url("../images/icons/close.svg") no-repeat center center;
+  min-height: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 16px;
+}
+
+.cart-order {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+/* Поповер Корзина (пустая) */
+
+.popover-cart-empty-active {
+  display: block;
+}
+
+.popover-cart-empty {
+  display: none;
+  position: absolute;
+  width: 230px;
+  top: 38px;
+  right: 1px;
+  background: #FCFCFC;
+  text-align: center;
+  padding: 48px 0;
+  border-radius: 4px;
+}
+
+.popover-title-empty {
+  margin: 0;
 }
 
 /* Слайдер */
@@ -632,7 +829,7 @@ body {
   list-style-type: none;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap:  40px 30px;
+  gap: 40px 30px;
   padding: 0;
 }
 
@@ -730,6 +927,7 @@ body {
   background: #FFFFFF;
   border: 1px solid #B9B9B9;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .field:hover {
@@ -737,7 +935,9 @@ body {
 }
 
 .field:focus {
-  border: 2px solid #2D3440;
+  box-shadow: inset 0 0 0 1px #2D3440;
+
+  outline: none;
 }
 
 .field:not(:empty):invalid {
@@ -1255,8 +1455,15 @@ body {
   border-radius: 50%;
 }
 
+.control-input-fat:checked:hover + .control-mark-fat::before,
+.control-input-fat:checked:focus + .control-mark-fat::before {
+  background: #FCFCFC;
+}
+
 .control-mark-fat:hover,
-.control-mark-topping:hover {
+.control-mark-topping:hover,
+.control-mark-fat:focus,
+.control-mark-topping:focus {
   border: 1px solid #FCFCFC;
 }
 
@@ -1264,7 +1471,8 @@ body {
   border: 1px solid rgba(252, 252, 252, 0.6);
 }
 
-.control-input-fat:checked:hover + .control-mark-fat::before {
+.control-input-fat:checked:hover + .control-mark-fat::before,
+.control-input-fat:checked:focus + .control-mark-fat::before {
   background: #FCFCFC;
 }
 
@@ -1297,7 +1505,8 @@ body {
   border: none;
 }
 
-.control-input-topping:checked:hover + .control-mark-topping {
+.control-input-topping:checked:hover + .control-mark-topping,
+.control-input-topping:checked:focus + .control-mark-topping {
   position: absolute;
   background: url("../images/icons/checkbox-white.svg") no-repeat center center;
   border: none;
