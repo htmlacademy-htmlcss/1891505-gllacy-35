@@ -534,7 +534,15 @@
             <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить
               заказ.</p>
             <div class="delivery-date-wrapper">
-              <label class="form-label" for="delivery-date">Дата</label>
+              <span class="form-label">
+                <label class="form-label" for="delivery-date">Дата</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button"></button>
+                    <span class="tooltip-text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
+                      доставки</span>
+
+                </span>
+              </span>
               <input class="field delivery-input" type="text" name="delivery-date" id="delivery-date"
                 placeholder="01.04.2020" required>
             </div>
@@ -544,7 +552,14 @@
                 placeholder="+7 800 999-00-00" required>
             </div>
             <div class="delivery-address-wrapper">
-              <label class="form-label" for="delivery-address">Адрес</label>
+              <span class="form-label">
+                <label class="form-label" for="delivery-address">Адрес</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button"></button>
+                    <span class="tooltip-text">Введите название улицы, дома и квартиры</span>
+
+                </span>
+              </span>
               <input class="field delivery-input" type="text" name="delivery-address" id="delivery-address"
                 placeholder="ул. Большая Конюшенная, 19/8" required>
             </div>
