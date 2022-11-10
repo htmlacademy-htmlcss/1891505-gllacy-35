@@ -39,6 +39,13 @@ body {
   background-color: #FEAFC3;
 }
 
+.body-blue {
+  background: #69A9FF;
+}
+
+.body-yellow {
+  background: #FCC850;
+}
 .button {
   color: #2D3440;
   font-weight: 700;
@@ -602,9 +609,23 @@ body {
   transform: translateY(-50%);
   top: 50%;
   border-radius: 50%;
-  background: #FFCBD8;
   opacity: 0.4;
   z-index: -1;
+}
+
+.body-pink .slider-ice-cream-active::before,
+.body-pink .slider-ice-cream-inactive::before {
+  background: #FFCBD8;
+}
+
+.body-blue .slider-ice-cream-active::before,
+.body-blue .slider-ice-cream-inactive::before {
+  background: #9FC8FF;
+}
+
+.body-yellow .slider-ice-cream-active::before,
+.body-yellow .slider-ice-cream-inactive::before {
+  background: #FCDC92;
 }
 
 .slider-foto-inactive {
