@@ -378,12 +378,12 @@ body {
   display: none;
   position: absolute;
   z-index: 1;
-  top: 38px;
+  top: 40px;
   right: 1px;
   background: #FCFCFC;
   border-radius: 4px;
   padding: 24px 16px;
-  width: 356px;
+  width: 325px;
 }
 
 .navigation-item-icon:focus-within .popover-search {
@@ -397,6 +397,13 @@ body {
   box-sizing: border-box;
 }
 
+.close-button {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /* Поповер - Авторизация */
 
 .popover-authorization-active {
@@ -408,11 +415,11 @@ body {
   position: absolute;
   z-index: 1;
   top: 40px;
-  right: -1px;
+  right: 1px;
   background: #FCFCFC;
   border-radius: 4px;
   padding: 48px;
-  width: 420px;
+  width: 324px;
 }
 
 .navigation-item-icon:focus-within .popover-authorization {
@@ -435,6 +442,7 @@ body {
 .user-authorization-wrapper {
   display: flex;
   column-gap: 23px;
+  margin-top: 12px;
 }
 
 .user-authorization-list {
@@ -443,8 +451,10 @@ body {
 }
 
 .user-authorization-link {
+  display: inline-block;
   font-size: 14px;
   color: #2D3440;
+  margin-top: 2px;
 }
 
 /* Поповер Корзина (с товарами)*/
@@ -460,7 +470,7 @@ body {
   width: 440px;
   background: #FCFCFC;
   border-radius: 4px;
-  top: 38px;
+  top: 40px;
   right: 1px;
   padding: 48px;
   box-sizing: border-box;
@@ -503,6 +513,7 @@ body {
 
 .cart-link img {
   display: block;
+  margin-left: 3px;
 }
 
 .cart-title {
@@ -510,11 +521,13 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #2D3440;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 3px;
   text-decoration: none;
 }
 
 .cart-price-wrapper span {
+  font-size: 14px;
   color: #B9B9B9;
   text-decoration: none;
 }
@@ -524,6 +537,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+  margin-left: 22px;
 }
 
 
@@ -543,6 +557,7 @@ body {
 .cart-order {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 32px;
 }
 
@@ -1331,7 +1346,7 @@ body {
   font-size: 12px;
   line-height: 16px;
   color: #2D3440;
-  margin: 13px 0 0 0;
+  margin: 11px 0 0 0;
 }
 
 .htmlacademy-wrapper {
@@ -1343,6 +1358,7 @@ body {
 }
 
 .htmlacademy-link {
+  display: inline-block;
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
@@ -1400,7 +1416,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 36px;
+  margin-bottom: 80px;
   color: #2D3440;
   font-size: 14px;
   line-height: 20px;
@@ -1628,7 +1644,7 @@ body {
 .topping-filter {
   display: flex;
   list-style-type: none;
-  margin: 0 16px 44px 0;
+  margin: 0 16px 0 0;
   padding-top: 12px;
 }
 
@@ -1711,7 +1727,7 @@ body {
 
 .catalog-product-list {
   padding: 0;
-  margin-bottom: 57px;
+  margin-bottom: 66px;
 }
 
 .product-card {
@@ -1727,8 +1743,10 @@ body {
 
 .product-image {
   display: block;
+  max-width: 100%;
   margin-left: 10px;
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .product-card-buy-wrapper {
@@ -1808,16 +1826,18 @@ body {
 /* Пагинация */
 
 .pagination-wrapper {
+  position: relative;
   display: flex;
   justify-content: end;
   align-items: center;
   margin-right: 9px;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  max-width: 300px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1825,7 +1845,7 @@ body {
 
 .pagination-item {
   position: relative;
-  width: 24px;
+  min-width: 24px;
 }
 
 .pagination-item:first-child {
@@ -1892,11 +1912,14 @@ body {
 }
 
 .pagination-show-more {
-  margin-right: 340px;
+  position: absolute;
+  left: 489px;
+  top: -8px;
   padding: 12px 32px;
   letter-spacing: 0.5px;
 }
 
 .pagination-panel {
   display: flex;
+  flex-wrap: wrap;
 }

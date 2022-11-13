@@ -77,6 +77,9 @@
                   <input class="field popover-search-input" type="text" name="search" placeholder="Поиск по сайту">
                 </label>
               </form>
+              <button class="close-button" type="button">
+                <span class="visually-hidden">Закрыть форму поиска</span>
+              </button>
             </div>
           </li>
           <li class="navigation-item navigation-item-user
@@ -97,18 +100,22 @@
               <h2 class="popover-title">Личный кабинет</h2>
               <form class="authorization-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="authorization-login">Логин</label>
-                <input class="field" id="authorization-login" type="email" name="login" placeholder="email@example.com">
+                <input class="field" id="authorization-login" type="email" name="login" placeholder="email@example.com"
+                  required>
                 <label class="visually-hidden" for="authorization-password">Пароль</label>
                 <input class="field" id="authorization-password" type="password" name="password" placeholder="********"
                   required>
                 <div class="user-authorization-wrapper">
-                  <button type="submit" class="button form-button">Войти</button>
+                  <button class="button form-button" type="submit">Войти</button>
                   <ul class="user-authorization-list">
                     <li><a class="user-authorization-link" href="#">Забыли пароль?</a></li>
                     <li><a class="user-authorization-link" href="#">Регистрация</a></li>
                   </ul>
                 </div>
               </form>
+              <button class="close-button" type="button">
+                <span class="visually-hidden">Закрыть форму авторизации</span>
+              </button>
             </div>
           </li>
           <li class="navigation-item navigation-item-user navigation-item-icon navigation-item-icon-cart">
@@ -139,7 +146,7 @@
                     </div>
                   </a>
                   <b class="cart-price">310 ₽</b>
-                  <button type="button" class="cart-button-delete">
+                  <button class="cart-button-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
@@ -153,7 +160,7 @@
                     </div>
                   </a>
                   <b class="cart-price">480 ₽</b>
-                  <button type="button" class="cart-button-delete">
+                  <button class="cart-button-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
@@ -162,12 +169,16 @@
                 <button class="button form-button" type="button">Оформить заказ</button>
                 <span class="product-cart-price">Итого: 790 ₽</span>
               </div>
+              <button class="close-button" type="button">
+                <span class="visually-hidden">Закрыть корзину</span>
+              </button>
             </div>
 
             <!-- Поповер - Пустая корзина -->
 
             <div class="popover-cart-empty popover-cart-empty-active">
               <h2 class="popover-title popover-title-empty">Ваша корзина пока пуста</h2>
+              Закрыть
             </div>
           </li>
         </ul>
@@ -379,7 +390,7 @@
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">310 ₽/кг</b>
-                <button type="button" class="product-card-button">
+                <button class="product-card-button" type="button">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="product-card-button-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                     fill="currentColor" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
@@ -404,7 +415,7 @@
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">340 ₽/кг</b>
-                <button type="button" class="product-card-button">
+                <button class="product-card-button" type="button">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="product-card-button-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                     fill="currentColor" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
@@ -421,14 +432,15 @@
             </li>
             <li class="product-card">
               <a class="product-card-link-image" href="#">
-                <img class="product-image" src="images/products/blueberries.jpg" alt="Мороженое «Черника»" width="168" height="168"></a>
+                <img class="product-image" src="images/products/blueberries.jpg" alt="Мороженое «Черника»" width="168"
+                  height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Черника</h3>
                 <p>Крем-брюле с&nbsp;черничным джемом</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">330 ₽/кг</b>
-                <button type="button" class="product-card-button">
+                <button class="product-card-button" type="button">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="product-card-button-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                     fill="currentColor" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
@@ -453,7 +465,7 @@
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">320 ₽/кг</b>
-                <button type="button" class="product-card-button">
+                <button class="product-card-button" type="button">
                   <span class="visually-hidden">В корзину</span>
                   <svg class="product-card-button-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                     fill="currentColor" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
@@ -513,7 +525,7 @@
                 <label class="visually-hidden" for="newsletter-email">Email</label>
                 <input class="field newsletter-input" type="email" placeholder="email@example.com"
                   name="newsletter-email" id="newsletter-email" required>
-                <button class="button form-button">Отправить</button>
+                <button class="button form-button" type="submit">Отправить</button>
               </form>
             </div>
           </section>
