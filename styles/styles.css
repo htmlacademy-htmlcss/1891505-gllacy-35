@@ -97,7 +97,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -1440,7 +1441,8 @@ body {
   background: rgba(252, 252, 252, 0.3) url("../images/icons/union.svg") no-repeat right 16px center;
   border: none;
   border-radius: 20px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   display: flex;
   letter-spacing: 1px;
   margin-right: 24px;
@@ -1481,12 +1483,14 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
