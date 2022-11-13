@@ -209,10 +209,10 @@
               <div class="range-wrapper-inputs">
                 <p class="catalog-filter-title catalog-filter-title-price">Цена:</p>
                 <label class="catalog-filter-label">
-                  от <input class="range-input" type="number" value="100" name="min-price"> ₽
+                  <input class="range-input" type="number" value="100" name="min-price"> ₽
                 </label>
                 <label class="catalog-filter-label">
-                  до <input class="range-input" type="number" value="500" name="max-price"> ₽
+                  - <input class="range-input" type="number" value="500" name="max-price"> ₽
                 </label>
               </div>
 
@@ -303,7 +303,7 @@
             <button class="button sorting-button">Применить</button>
           </form>
 
-          <ul class="product-list">
+          <ul class="product-list catalog-product-list">
             <li class="product-card">
               <a class="product-card-link-image" href="#">
                 <img class="product-image" src="images/products/raspberry.jpg" alt="Мороженое
@@ -360,7 +360,7 @@
                   «Черника»" width="168" height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Черника</h3>
-                <p>Крем-брюле с черничным джемом</p>
+                <p>Крем-брюле с&nbsp;черничным джемом</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">330 ₽/кг</b>
@@ -385,7 +385,7 @@
                   «Бабл-гам»" width="168" height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Бабл-гам</h3>
-                <p>Ванильный пломбир со сладкой посыпкой</p>
+                <p>Ванильный пломбир со&nbsp;сладкой посыпкой</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">320 ₽/кг</b>
@@ -435,7 +435,7 @@
                   «Банан»" width="168" height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Банан</h3>
-                <p>Сливочный пломбир с банановым вкусом</p>
+                <p>Сливочный пломбир с&nbsp;банановым вкусом</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">340 ₽/кг</b>
@@ -485,7 +485,7 @@
                   «Клубничка»" width="168" height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Клубничка</h3>
-                <p>Сливочный пломбир с клубничным вкусом</p>
+                <p>Сливочный пломбир с&nbsp;клубничным вкусом</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">300 ₽/кг</b>
@@ -535,7 +535,7 @@
                   height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Ментол</h3>
-                <p>Сливочный пломбир с ментоловым сиропом</p>
+                <p>Сливочный пломбир с&nbsp;ментоловым сиропом</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">320 ₽/кг</b>
@@ -586,7 +586,7 @@
                   «Крем-брюле»" width="168" height="168"></a>
               <a class="product-card-link-name" href="#">
                 <h3>Крем-брюле</h3>
-                <p>Классическое крем-брюле</p>
+                <p>Классическое <br> крем-брюле</p>
               </a>
               <div class="product-card-buy-wrapper">
                 <b class="product-card-price">280 ₽/кг</b>
@@ -610,34 +610,32 @@
           <div class="pagination-wrapper">
             <button class="button pagination-show-more" type="button">Показать
               еще</button>
-            <ul class="pagination">
-              <li class="pagination-item">
-                <a class="pagination-link pagination-prev pagination-disabled">
-                  <span class="visually-hidden">Предыдущая страница</span>
-                </a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link pagination-link-current" href="#">1</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">2</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link
+            <div class="pagination-panel">
+              <button class="pagination-prev" type="button">
+                <span class="visually-hidden">Предыдущая страница</span>
+              </button>
+              <ul class="pagination">
+                <li class="pagination-item">
+                  <a class="pagination-link pagination-link-current" href="#">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link
                   pagination-current">3</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">4</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">5</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link pagination-next" href="#">
-                  <span class="visually-hidden">Следующая страница</span>
-                </a>
-              </li>
-            </ul>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">4</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">5</a>
+                </li>
+              </ul>
+              <button class="pagination-next" type="button">
+                <span class="visually-hidden">Следующая страница</span>
+              </button>
+            </div>
           </div>
         </section>
       </div>
