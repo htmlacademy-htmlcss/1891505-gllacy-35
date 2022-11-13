@@ -1898,7 +1898,7 @@ body {
 
 .pagination-prev:focus,
 .pagination-next:focus {
-  background: rgba(252, 252, 252, 0.5);
+  background: rgba(252, 252, 252, 0.5) url("../images/icons/union.svg") no-repeat center center;
   outline: 2px solid #2d3440;
   border-radius: 50%;
 }
