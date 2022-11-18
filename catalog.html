@@ -35,8 +35,8 @@
               <li class="catalog-navigation-item catalog-navigation-item-new">
                 <a class="catalog-navigation-link catalog-new-products" href="#">Новинки</a>
               </li>
-              <li class="catalog-navigation-item">
-                <a class="catalog-navigation-link" href="#">Сливочное</a>
+              <li class="catalog-navigation-item current">
+                <a class="catalog-navigation-link current" href="#">Сливочное</a>
               </li>
               <li class="catalog-navigation-item">
                 <a class="catalog-navigation-link" href="#">Щербеты</a>
@@ -75,7 +75,7 @@
 
             <div class="popover-search popover-search-active">
               <form class="popover-search-form" action="#" method="get">
-                <label>
+                <label class="visually-hidden">Пойск по сайту
                   <input class="field popover-search-input" type="text" name="search" placeholder="Поиск по сайту">
                 </label>
               </form>
@@ -249,27 +249,30 @@
               <ul class="catalog-filter-list fat-filter">
                 <li class="catalog-filter-radio">
                   <label class="control-fat">
-                    <input class="visually-hidden control-input-fat" type="radio" name="fat" value="0%">
-                    <span class="control-mark-fat"></span>
+                    <input class="visually-hidden control-input" type="radio" name="fat" value="0%">
+                    <span class="control-mark control-mark-fat"></span>
                     0%</label>
                 </li>
                 <li class="catalog-filter-radio">
                   <label class="control-fat">
-                    <input class="visually-hidden control-input-fat" type="radio" name="fat" value="10%" checked>
-                    <span class="control-mark-fat"></span>
-                    до 10%</label>
+                    <input class="visually-hidden control-input" type="radio" name="fat" value="10%" checked>
+                    <span class="control-mark control-mark-fat"></span>
+                    <span class="filter-name">до 10%</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-radio">
                   <label class="control-fat">
-                    <input class="visually-hidden control-input-fat" type="radio" name="fat" value="30%">
-                    <span class="control-mark-fat"></span>
-                    до 30%</label>
+                    <input class="visually-hidden control-input" type="radio" name="fat" value="30%">
+                    <span class="control-mark control-mark-fat"></span>
+                    <span class="filter-name">до 30%</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-radio">
                   <label class="control-fat">
-                    <input class="visually-hidden control-input-fat" type="radio" name="fat" value="30% or more">
-                    <span class="control-mark-fat control-input-fat"></span>
-                    выше 30%</label>
+                    <input class="visually-hidden control-input" type="radio" name="fat" value="30% or more">
+                    <span class="control-mark control-mark-fat"></span>
+                    <span class="filter-name">выше 30%</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -279,35 +282,39 @@
               <ul class="catalog-filter-list topping-filter">
                 <li class="catalog-filter-checkbox">
                   <label class="control-topping">
-                    <input class="visually-hidden control-input-topping" type="checkbox" name="topping"
-                      value="chocolate" checked>
-                    <span class="control-mark-topping"></span>
-                    шоколадные</label>
+                    <input class="visually-hidden control-input" type="checkbox" name="topping" value="chocolate"
+                      checked>
+                    <span class="control-mark control-mark-topping"></span>
+                    <span class="filter-name">шоколадные</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-checkbox">
                   <label class="control-topping">
-                    <input class="visually-hidden control-input-topping" type="checkbox" name="topping" value="sugar"
-                      checked>
-                    <span class="control-mark-topping"></span>
-                    сахарные посыпки</label>
+                    <input class="visually-hidden control-input" type="checkbox" name="topping" value="sugar" checked>
+                    <span class="control-mark control-mark-topping"></span>
+                    <span class="filter-name">сахарные посыпки</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-checkbox">
-                  <label class="control-topping control-input-topping">
-                    <input class="visually-hidden control-input-topping" type="checkbox" name="topping" value="fruits">
-                    <span class="control-mark-topping"></span>
-                    фрукты</label>
+                  <label class="control-topping">
+                    <input class="visually-hidden control-input" type="checkbox" name="topping" value="fruits">
+                    <span class="control-mark control-mark-topping"></span>
+                    <span class="filter-name">фрукты</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-checkbox">
-                  <label class="control-topping control-input-topping">
-                    <input class="visually-hidden control-input-topping" type="checkbox" name="topping" value="syrups">
-                    <span class="control-mark-topping"></span>
-                    сиропы</label>
+                  <label class="control-topping">
+                    <input class="visually-hidden control-input" type="checkbox" name="topping" value="syrups">
+                    <span class="control-mark control-mark-topping"></span>
+                    <span class="filter-name">сиропы</span>
+                  </label>
                 </li>
                 <li class="catalog-filter-checkbox">
-                  <label class="control-topping control-input-topping">
-                    <input class="visually-hidden control-input-topping" type="checkbox" name="topping" value="jams">
-                    <span class="control-mark-topping"></span>
-                    джемы</label>
+                  <label class="control-topping">
+                    <input class="visually-hidden control-input" type="checkbox" name="topping" value="jams">
+                    <span class="control-mark control-mark-topping"></span>
+                    <span class="filter-name">джемы</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>

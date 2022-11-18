@@ -73,7 +73,7 @@
 
             <div class="popover-search popover-search-active">
               <form class="popover-search-form" action="#" method="get">
-                <label>
+                <label class="visually-hidden">Пойск по сайту
                   <input class="field popover-search-input" type="text" name="search" placeholder="Поиск по сайту">
                 </label>
               </form>
@@ -670,8 +670,32 @@
       </div>
     </footer>
 
+    <!-- Модальное окно -->
 
+    <div class="modal-container modal-container-close">
+      <div class="modal-feedback">
+        <button type="button" class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <form class="modal-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
 
+            <label class="visually-hidden" for="user-name">Имя и фамилия</label>
+            <input class="field modal-field" type="text" id="user-name" name="feedback-user-name"
+              placeholder="Имя и фамилия" required>
+            <label class="visually-hidden" for="user-email">Электронная почта</label>
+            <input class="field modal-field" type="email" id="user-email" name="feedback-user-email"
+              placeholder="email@example.com" required>
+            <label class="visually-hidden" for="user-message">Ваше сообщение</label>
+            <textarea class="field modal-field" id="user-message" name="feedback-user-message"
+              placeholder="В свободной форме" rows="6"></textarea>
+            <button class="button form-button modal-button" type="submit">Отправить</button>
+
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
